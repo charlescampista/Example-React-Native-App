@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View, FlatList } from 'react-native'
+import CardProduto from '../components/CardProduto';
 import Tag from '../components/Tag';
 
 export default function Home() {
@@ -606,7 +607,9 @@ export default function Home() {
           }
         ]
         }
-        renderItem={({ item }) => <Text>{item.title}</Text>}
+        renderItem={({ item }) => <CardProduto produto={item} />}
+        numColumns={2}
+        horizontal={false}
       />
 
     </View>
